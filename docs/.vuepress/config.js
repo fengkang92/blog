@@ -1,10 +1,10 @@
 module.exports = {
-  title: '个人主页',
+  title: '人事已非',
   description: '阿布的博客',
   head: [
     ['link', {
       rel: 'icon',
-      href: '/img/logo.ico'
+      href: '/img/favicon.ico'
     }],
     ['link', {
       rel: 'manifest',
@@ -12,6 +12,7 @@ module.exports = {
     }],
   ],
   themeConfig: {
+    displayAllHeaders: true,
     nav: [{
         text: '主页',
         link: '/'
@@ -53,5 +54,13 @@ module.exports = {
     ],
     sidebarDepth: 1,
     lastUpdated: 'Last Updated',
+    serviceWorker: {
+      updatePopup: true, // Boolean | Object, 默认值是 undefined.
+      // 如果设置为 true, 默认的文本配置将是: 
+      updatePopup: { 
+         message: "New content is available.", 
+         buttonText: "Refresh" 
+      }
+    }
   },
 }
